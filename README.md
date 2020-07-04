@@ -34,3 +34,14 @@ let _query = _Utils.formateUrl(_url) // _url参数不传的时候，默认取当
 console.log(_query) // {"name":"zhangsan","age":"12"}
 
 ```
+
+#### 将时间戳序列化时间字符串
+```js
+let _time
+_time = _Utils.formateUrl('1593867729494','YYYY/MM/DD hh:mm:ss') // "2020/07/04 21:02:09"
+_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD hh:mm:ss') // "2020-07-04 21:02:09"
+_time = _Utils.formateUrl('1593867729494','YYYY-M-D hh:mm:ss') // "2020-7-4 21:02:09"
+_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD h:m:s') // "2020-07-04 21:2:9"
+_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD h:m') // "2020-07-04 21:2"
+_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD hh:mm') // "2020-07-04 21:02"
+```
