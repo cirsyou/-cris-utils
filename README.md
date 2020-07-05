@@ -7,13 +7,20 @@ npm install cris-utils --save
 
 #### 引入方式
 ```js
+// 全部引入
 import _Utils from 'cris-utils'
+// 按需引入
+import {} from 'cris-utils'
 ```
 
 #### 判断是否为安卓机型
 ```js
 
-let isAndroid = _Utils.isAndroid 
+let isAndroid = _Utils.isAndroid
+// 或者按需引入
+// import { isAndroid } from 'cris-utils'
+
+
 console.log(isAndroid) // true 为在安卓机型中，false 为不在安卓机型中
 
 ```
@@ -22,6 +29,10 @@ console.log(isAndroid) // true 为在安卓机型中，false 为不在安卓机�
 ```js
 
 let isIOS = _Utils.isIOS
+// 或者按需引入
+// import { isIOS } from 'cris-utils'
+
+
 console.log(isIOS) // true 为在ios机型中，false 为不在ios机型中
 
 ```
@@ -30,6 +41,9 @@ console.log(isIOS) // true 为在ios机型中，false 为不在ios机型中
 ```js
 
 let _url = "https://www.baidu.com/?name=zhangsan&age=12"
+// 或者按需引入
+// import {formateUrl} from 'cris-utils'
+
 let _query = _Utils.formateUrl(_url) // _url参数不传的时候，默认取当前访问的链接地址
 console.log(_query) // {"name":"zhangsan","age":"12"}
 
@@ -37,11 +51,14 @@ console.log(_query) // {"name":"zhangsan","age":"12"}
 
 #### 将时间戳序列化时间字符串
 ```js
+// 或者按需引入
+// import {formateUrl} from 'cris-utils'
+
 let _time
-_time = _Utils.formateUrl('1593867729494','YYYY/MM/DD hh:mm:ss') // "2020/07/04 21:02:09"
-_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD hh:mm:ss') // "2020-07-04 21:02:09"
-_time = _Utils.formateUrl('1593867729494','YYYY-M-D hh:mm:ss') // "2020-7-4 21:02:09"
-_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD h:m:s') // "2020-07-04 21:2:9"
-_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD h:m') // "2020-07-04 21:2"
-_time = _Utils.formateUrl('1593867729494','YYYY-MM-DD hh:mm') // "2020-07-04 21:02"
+_time = _Utils.formateUrl(1593867729494,'YYYY/MM/DD hh:mm:ss') // "2020/07/04 21:02:09"
+_time = _Utils.formateUrl(1593867729494,'YYYY-MM-DD hh:mm:ss') // "2020-07-04 21:02:09"
+_time = _Utils.formateUrl(1593867729494,'YYYY-M-D hh:mm:ss') // "2020-7-4 21:02:09"
+_time = _Utils.formateUrl(1593867729494,'YYYY-MM-DD h:m:s') // "2020-07-04 21:2:9"
+_time = _Utils.formateUrl(1593867729494,'YYYY-MM-DD h:m') // "2020-07-04 21:2"
+_time = _Utils.formateUrl(1593867729494,'YYYY-MM-DD hh:mm') // "2020-07-04 21:02"
 ```
